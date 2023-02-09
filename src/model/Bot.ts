@@ -7,8 +7,19 @@ class Bot extends Player {
   }
 
   move(board: PIECE[]) {
-    const randomIndex = Math.floor(Math.random()*board.length);
-    return randomIndex;
+    for (let i = 0; i < 9; i++) {
+      if (board[i] == 0) {
+        return 2;
+      } else {
+        return 5;
+      }
+    }
+    return 0;
+
+    // const randomInd = Math.floor(Math.random()*board.length);
+    // return randomInd;
+
+    
   }
 }
 
